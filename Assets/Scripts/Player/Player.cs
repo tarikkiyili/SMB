@@ -17,7 +17,8 @@ public class Player : Entity
     public PlayerIdleState idleState { get; private set; }
     public PlayerMoveState moveState { get; private set; }
     public PlayerJumpState jumpState { get; private set; }
-    public PlayerWallClingState climbState {get; private set; }
+    public PlayerWallClingState climbState { get; private set; }
+    public PlayerDeathState deathState { get; private set; }
 
     protected override void Awake()
     {
@@ -29,6 +30,7 @@ public class Player : Entity
         moveState = new PlayerMoveState(this, stateMachine, "Move");
         jumpState = new PlayerJumpState(this, stateMachine, "Jump");
         climbState = new PlayerWallClingState(this, stateMachine, "Climb");
+        deathState = new PlayerDeathState(this, stateMachine, "Death");
     }
     public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
     

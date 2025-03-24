@@ -15,7 +15,7 @@ public class PlayerWallClingState : PlayerState
 
     public override void Exit()
     {
-        rb.gravityScale = 4;
+        rb.gravityScale = 2;
         base.Exit();
     }
 
