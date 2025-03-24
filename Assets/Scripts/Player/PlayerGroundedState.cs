@@ -17,10 +17,11 @@ public class PlayerGroundedState : PlayerState
     public override void Update()
     {
         base.Update();
-
-        // else if (player.IsWallDetected() && Input.GetKeyDown(KeyCode.C))
-        //     stateMachine.ChangeState(player.grabState);  
+         
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && player.IsGroundDetected())
             stateMachine.ChangeState(player.jumpState);
+        if (player.IsWallDetected())
+            stateMachine.ChangeState(player.climbState);
+
     }
 }

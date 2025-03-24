@@ -2,16 +2,6 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    // [Header("Hanging info")]
-    // public float hangingSpeed = 5f;
-    // protected LayerMask whatIsEnemy;
-    // [SerializeField] protected Transform ceilingCheck;
-    // [SerializeField] protected float ceilingCheckDistance;
-    // public LayerMask attackableLayer;
-
-
-    // public virtual bool IsCeilingDetected() => Physics2D.Raycast(ceilingCheck.position, Vector2.up, ceilingCheckDistance, whatIsGround);
-    
     protected override void OnDrawGizmos(){
         base.OnDrawGizmos();
         // Gizmos.DrawLine(ceilingCheck.position, new Vector3(ceilingCheck.position.x, ceilingCheck.position.y + ceilingCheckDistance));
@@ -23,15 +13,12 @@ public class Player : Entity
     [Header("Climbing Info")]
     public float climbingSpeed = 15f;
 
-    #region States
     public PlayerStateMachine stateMachine { get; private set; }
     public PlayerIdleState idleState { get; private set; }
     public PlayerMoveState moveState { get; private set; }
     public PlayerJumpState jumpState { get; private set; }
+    public PlayerWallClingState climbState {get; private set; }
 
-
-
-    #endregion
     protected override void Awake()
     {
         base.Awake();
@@ -41,6 +28,7 @@ public class Player : Entity
         idleState = new PlayerIdleState(this, stateMachine, "Idle");
         moveState = new PlayerMoveState(this, stateMachine, "Move");
         jumpState = new PlayerJumpState(this, stateMachine, "Jump");
+        climbState = new PlayerWallClingState(this, stateMachine, "Climb");
     }
     public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
     

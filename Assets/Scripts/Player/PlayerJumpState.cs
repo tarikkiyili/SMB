@@ -19,7 +19,13 @@ public class PlayerJumpState : PlayerState
         base.Update();
         if (Time.time >= jumpStartTime + groundCheckDisableTime && player.IsGroundDetected())
             stateMachine.ChangeState(player.idleState);
+        if (player.IsWallDetected())
+            stateMachine.ChangeState(player.climbState);
+            
         player.SetVelocity(player.moveSpeed * .8f * xInput, rb.linearVelocity.y);
+
+        
+
     }
     public override void Exit()
     {
