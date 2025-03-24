@@ -241,7 +241,7 @@ MonoBehaviour:
   wallCheck: {fileID: 2088127651}
   wallCheckDistance: 0.05
   jumpForce: 7
-  climbingSpeed: 15
+  climbingSpeed: 5
 --- !u!1 &613046457
 GameObject:
   m_ObjectHideFlags: 0
