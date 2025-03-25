@@ -50,4 +50,21 @@ public class Player : Entity
     //     stateMachine.ChangeState(deadState);
     //     GameManager.Instance.GameOver();
     // }
+
+    public bool IsTouchingSaw()
+    {
+        // Oyuncunun collider'ını al
+        Collider2D myCollider = GetComponent<Collider2D>();
+
+        // Temasta olunan tüm colliderları al
+        ContactFilter2D contactFilter = new ContactFilter2D();
+        contactFilter.SetLayerMask(LayerMask.GetMask("Saw")); // Sadece "Saw" layer'ını kontrol et
+        contactFilter.useLayerMask = true;
+
+        Collider2D[] results = new Collider2D[5];
+        int count = myCollider.Overlap(contactFilter, results);
+
+        return count > 0;
+    }
+
 }

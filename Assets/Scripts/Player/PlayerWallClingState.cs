@@ -23,6 +23,12 @@ public class PlayerWallClingState : PlayerState
     {
         base.Update();
 
+        if (player.IsTouchingSaw())
+        {
+            stateMachine.ChangeState(player.deathState);
+            return;
+        }
+
         if (!player.IsWallDetected() || (xInput != 0 && xInput != facingDirTemp))
         {
             stateMachine.ChangeState(player.jumpState);

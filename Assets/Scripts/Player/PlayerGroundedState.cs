@@ -17,7 +17,13 @@ public class PlayerGroundedState : PlayerState
     public override void Update()
     {
         base.Update();
-         
+
+        if (player.IsTouchingSaw())
+        {
+            stateMachine.ChangeState(player.deathState);
+            return;
+        }
+            
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && player.IsGroundDetected())
             stateMachine.ChangeState(player.jumpState);
         if (player.IsWallDetected())

@@ -17,6 +17,11 @@ public class PlayerJumpState : PlayerState
     public override void Update()
     {
         base.Update();
+        if (player.IsTouchingSaw())
+        {
+            stateMachine.ChangeState(player.deathState);
+            return;
+        }
         if (Time.time >= jumpStartTime + groundCheckDisableTime && player.IsGroundDetected())
             stateMachine.ChangeState(player.idleState);
         if (player.IsWallDetected())
