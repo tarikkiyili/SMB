@@ -4,6 +4,7 @@
 [Bb]uilds/
 [Oo]bj/
 [Mm]emoryCaptures/
+[Ll]ogs/
 *.csproj
 *.unityproj
 *.sln
