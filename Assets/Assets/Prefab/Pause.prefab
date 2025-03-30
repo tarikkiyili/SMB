@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 4976673068559650217}
   - component: {fileID: 5645730937175177290}
   - component: {fileID: 4547510284020727757}
+  - component: {fileID: 6831998997895438138}
   m_Layer: 5
   m_Name: GameOverPanel
   m_TagString: Untagged
@@ -384,6 +385,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &6831998997895438138
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865386661465528767}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2291415748740406996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,6 +1075,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b62136783b254967ab016d702f91235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverPanel: {fileID: 1865386661465528767}
+  levelCompletedPanel: {fileID: 7496196269734553425}
   pausePanel: {fileID: 5625176518016384711}
 --- !u!1 &4640512935752055063
 GameObject:
@@ -1672,13 +1687,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3460411998912157369}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 7046158129385063594}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: LoadNextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2584,6 +2599,7 @@ GameObject:
   - component: {fileID: 7524879000158355878}
   - component: {fileID: 5826380479512972040}
   - component: {fileID: 3612055662612570095}
+  - component: {fileID: 4448474219780702526}
   m_Layer: 5
   m_Name: LevelCompletePanel
   m_TagString: Untagged
@@ -2653,6 +2669,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &4448474219780702526
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7496196269734553425}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7717221867119913363
 GameObject:
   m_ObjectHideFlags: 0
