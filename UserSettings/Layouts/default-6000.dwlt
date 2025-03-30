@@ -247,8 +247,8 @@ MonoBehaviour:
     y: 0
     width: 507.5
     height: 571
-  m_MinSize: {x: 202, y: 226}
-  m_MaxSize: {x: 4002, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -1403,7 +1403,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Assets/Prefab
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1413,16 +1413,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 60
   m_LastFolders:
-  - Assets/Assets/Prefab
+  - Assets
   m_LastFoldersGridSize: 60
   m_LastProjectPath: /Users/tariking/SMB
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 14c00000
-    m_LastClickedID: 49172
-    m_ExpandedIDs: 00000000e0bd0000e2bd0000e4bd0000e6bd00000cc0000010c0000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 7ebf0000
+    m_LastClickedID: 49022
+    m_ExpandedIDs: 000000007ebf000080bf000082bf000084bf00002cc0000036c0000038c0000060c0000062c0000064c000003ec100006cc4000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1451,7 +1451,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e0bd0000e2bd0000e4bd0000e6bd0000
+    m_ExpandedIDs: 000000007ebf000080bf000082bf000084bf0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1480,7 +1480,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c4c50000e2ad0000cac70000fac5000048b40000f6c7000062d30000f4d300004eb400000cb3000048b3000090c200003abb00006ebb00008ac2000076bb00007abb0000eec00000a8bb0000a4bb000068a30000f4ac000054ad00000000000076a70000ccc50000b6d8000064b000002cbb0000a65f0100e8d800007cff0000b02a0100bc280100fabc0000b4be00000ebf000012bf000008c00000bec2000000ca000004ca000008ca00000ebe00003ece0000a0be00002cc200001ac0000034c0000014c00000
+    m_ExpandedInstanceIDs: c4c50000e2ad0000cac70000fac5000048b40000f6c7000062d30000f4d300004eb400000cb3000048b3000090c200003abb00006ebb00008ac2000076bb00007abb0000eec00000a8bb0000a4bb000068a30000f4ac000054ad00000000000076a70000ccc50000b6d8000064b000002cbb0000a65f0100e8d800007cff0000b02a0100bc280100fabc0000b4be00000ebf000012bf000008c00000bec2000000ca000004ca000008ca00000ebe00003ece0000a0be00001ac0000034c0000014c000001ec7000086c70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
