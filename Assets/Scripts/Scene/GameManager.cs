@@ -1,14 +1,16 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
     public GameObject gameOverPanel;
     public GameObject levelCompletedPanel;
     public GameObject pausePanel;
+    public GameObject timerText;
+    public TextMeshProUGUI finishTimeText;
 
     private Player player;
 
@@ -19,8 +21,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
-
-        // Oyuncuyu sahnede bul ve referans al
         GameObject playerObj = GameObject.FindWithTag("Player");
         if (playerObj != null)
             player = playerObj.GetComponent<Player>();
@@ -36,27 +36,25 @@ public class GameManager : MonoBehaviour
                 PauseGame();
         }
 
-        // Oyuncu öldüyse Game Over yap
         if (IsPlayerDead() && !gameOverPanel.activeSelf)
-        {
             GameOver();
-        }
     }
 
     private bool IsPlayerDead()
     {
         return player != null && player.stateMachine.currentState == player.deathState;
     }
-    // Aşağıdaki fonksiyonların her birisi pause menüsü ve içerisindeki seçenekleri açıp kapatma. 
     public void PauseGame()
     {
         pausePanel.SetActive(true);
+        timerText.SetActive(false);
         Time.timeScale = 0f;
     }
 
     public void ResumeGame()
     {
         pausePanel.SetActive(false);
+        timerText.SetActive(true);
         Time.timeScale = 1f;
     }
 
@@ -80,12 +78,19 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         StartCoroutine(StopTimeAfterDelay(2.5f));
+        timerText.SetActive(false);
         StartCoroutine(FadeIn(gameOverPanel, 0.25f));
     }
 
     public void LevelCompleted()
     {
+        LevelTimer timer = FindFirstObjectByType<LevelTimer>();
+        timer.StopTimer();
+        float time = timer?.GetElapsedTime() ?? 0f;
+        finishTimeText.text = string.Format("{0:00}:{1:00}", Mathf.FloorToInt(time / 60f), Mathf.FloorToInt(time % 60f));
+        timerText.SetActive(false);
         Time.timeScale = 0.1f;
+
         StartCoroutine(StopTimeAfterDelay(1f));
         StartCoroutine(FadeIn(levelCompletedPanel, 0.25f));
     }
@@ -117,7 +122,7 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("Son leveldi! Level bölümüne dönülüyor...");
-            LoadGameScene(); // istersen buraya yönlendirme yap
+            LoadGameScene();
         }
     }
 
