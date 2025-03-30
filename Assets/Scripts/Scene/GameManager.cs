@@ -12,11 +12,21 @@ public class GameManager : MonoBehaviour
     public GameObject timerText;
     public TextMeshProUGUI finishTimeText;
 
+    public AudioSource levelCompleteAudio;
+    public AudioSource gameOverAudio;
+    public AudioSource inGameAudio;
+    private static bool isMusicPlaying = false;
+
     private Player player;
 
     private void Awake()
     {
         Instance = this;
+
+        GameObject mainMenuAudioObj = GameObject.Find("MainMenu");
+        AudioSource menuAudio = mainMenuAudioObj.GetComponent<AudioSource>();
+        if (menuAudio.isPlaying)
+            menuAudio.Stop();
     }
     void Start()
     {
@@ -24,6 +34,12 @@ public class GameManager : MonoBehaviour
         GameObject playerObj = GameObject.FindWithTag("Player");
         if (playerObj != null)
             player = playerObj.GetComponent<Player>();
+        if (!isMusicPlaying)
+        {
+            inGameAudio.loop = true;
+            inGameAudio.Play();
+            isMusicPlaying = true;
+        }
     }
 
     void Update()
@@ -77,6 +93,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        gameOverAudio.Play();
         StartCoroutine(StopTimeAfterDelay(2.5f));
         timerText.SetActive(false);
         StartCoroutine(FadeIn(gameOverPanel, 0.25f));
@@ -84,6 +101,7 @@ public class GameManager : MonoBehaviour
 
     public void LevelCompleted()
     {
+        levelCompleteAudio.Play();
         LevelTimer timer = FindFirstObjectByType<LevelTimer>();
         timer.StopTimer();
         float time = timer?.GetElapsedTime() ?? 0f;
