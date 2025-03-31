@@ -695,6 +695,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13651e9090c5841528a7efaabccd1bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuMusic: {fileID: 2035200294407119935}
+  inGameMusic: {fileID: 8426412126897784233}
+  levelCompleteAudio: {fileID: 1054148240334664227}
+  gameOverAudio: {fileID: 3013734355692263498}
+  clickSound: {fileID: 8010531238827115340}
 --- !u!1 &8018878002184714926
 GameObject:
   m_ObjectHideFlags: 0

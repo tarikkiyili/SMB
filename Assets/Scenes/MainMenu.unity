@@ -476,11 +476,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1074147449}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &723452528 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2035200294407119935, guid: ac9032801a4a642cb9e697860675dc06, type: 3}
-  m_PrefabInstance: {fileID: 1361197939}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1074147448
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,18 +596,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1257923076}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: ExitGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1361197940}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -982,18 +965,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1361197940}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1211833772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,7 +1130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1720aba7feff404a9b43950cb9ce859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuAudio: {fileID: 723452528}
 --- !u!1001 &1361197939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1221,11 +1191,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac9032801a4a642cb9e697860675dc06, type: 3}
---- !u!82 &1361197940 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8010531238827115340, guid: ac9032801a4a642cb9e697860675dc06, type: 3}
-  m_PrefabInstance: {fileID: 1361197939}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1643207148
 GameObject:
   m_ObjectHideFlags: 0

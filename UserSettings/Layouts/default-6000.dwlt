@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1800
     height: 1097
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 28
+  controlID: 52
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -1225,7 +1225,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -138702
+  m_LastSelectedObjectID: -69150
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1265,9 +1265,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 46b90100
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8cc8fdfff0d0fdffc0d9fdff36e2fdff64e2fdff960bfeff980bfeffb00ffeffd40ffefffe18feff1c1bfeff3e21feff9e23feffaa25feffe625feffe825feff402cfeffaa32feff4e3cfeff2442feffde81fefff889feffb09afeff069efeff089efeff5e9ffeff4cc1feff1cc2feff62c6feff50cafeffcecdfeff0ed1feff80a3ffffacf6ffffecfaffffdeff0000a6000100860101000ad301001ad3010026d3010084dc0100
+      m_ExpandedIDs: b0d0fefff0d3feff54d7feff80d7fefffcdffeffcee1feff26e3feff84f2feff88f2feffc2f2feff9ef5feff8614ffff9c14ffffa014ffffa214ffff382dffff7232ffff943bffffea4cffff4e50ffff0860fffff670ffff0671fffffa73ffffb476ffffbc86ffff848cffffe08dffff8292ffffb49cffffdc9dfffff29dfffff69dfffff89dffffe0b1ffff12b4fffffcb5ffff88b8fffffacdffff28d0ffff4ad1ffff8ed2ffff04d6ffff58d6ffffe4d9ffffe6d9ffffaadfffffccdfffffdcdfffff72e3ffffc6e3ffffeafaffffecfafffff4ffffff7a05010096050100cc0c01003a1301004e1301005e3c01007a3c0100c8470100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1403,7 +1403,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Assets/Prefab
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1413,16 +1413,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 60
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Assets/Prefab
   m_LastFoldersGridSize: 60
   m_LastProjectPath: /Users/tariking/SMB
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 04c00000
-    m_LastClickedID: 49156
-    m_ExpandedIDs: 000000007ebf000080bf000082bf000084bf000002c0000006c0000000ca9a3b
+    m_SelectedIDs: b6c00000
+    m_LastClickedID: 49334
+    m_ExpandedIDs: 00000000b2bd0000b4bd0000b6bd0000b8bd000030be000034be000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1451,7 +1451,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007ebf000080bf000082bf000084bf0000
+    m_ExpandedIDs: 00000000b2bd0000b4bd0000b6bd0000b8bd0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -701,6 +701,7 @@ GameObject:
   - component: {fileID: 5060639176196176940}
   - component: {fileID: 3524827349528823972}
   - component: {fileID: 1269530104688435364}
+  - component: {fileID: 4529141223964621516}
   m_Layer: 5
   m_Name: LevelsButton
   m_TagString: Untagged
@@ -785,7 +786,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -822,6 +823,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4529141223964621516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2616079776122474766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36e1c810eaef49c8aeb07fec14c6862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3411238712222750153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,6 +1851,7 @@ GameObject:
   - component: {fileID: 465380543361532088}
   - component: {fileID: 1546407115946193444}
   - component: {fileID: 336413458073508588}
+  - component: {fileID: 2869830461652797010}
   m_Layer: 5
   m_Name: NextLevelButton
   m_TagString: Untagged
@@ -1922,7 +1936,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1959,6 +1973,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2869830461652797010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5646264031450467246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36e1c810eaef49c8aeb07fec14c6862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5668921138861577951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,6 +2133,7 @@ GameObject:
   - component: {fileID: 3019653619735773649}
   - component: {fileID: 597624828203207699}
   - component: {fileID: 8955302211675014650}
+  - component: {fileID: 9059103817026217119}
   m_Layer: 5
   m_Name: LevelsButton
   m_TagString: Untagged
@@ -2191,7 +2218,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2228,6 +2255,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &9059103817026217119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103472568942035729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36e1c810eaef49c8aeb07fec14c6862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6482586510340850026
 GameObject:
   m_ObjectHideFlags: 0
@@ -2240,6 +2279,7 @@ GameObject:
   - component: {fileID: 7842081621584017166}
   - component: {fileID: 1747028567917922766}
   - component: {fileID: 4248387397025712003}
+  - component: {fileID: 6835048786120517367}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -2324,7 +2364,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2361,6 +2401,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6835048786120517367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6482586510340850026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36e1c810eaef49c8aeb07fec14c6862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6534039105567716721
 GameObject:
   m_ObjectHideFlags: 0
@@ -3550,6 +3602,7 @@ GameObject:
   - component: {fileID: 3117133995462100869}
   - component: {fileID: 7785796768511232520}
   - component: {fileID: 4738500688553329367}
+  - component: {fileID: 3219254769316861524}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -3634,7 +3687,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -3671,6 +3724,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3219254769316861524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100319450883909584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36e1c810eaef49c8aeb07fec14c6862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9162308214598173833
 GameObject:
   m_ObjectHideFlags: 0
@@ -3965,6 +4030,7 @@ GameObject:
   - component: {fileID: 2134251344106584121}
   - component: {fileID: 4895835744834790849}
   - component: {fileID: 6911632933281638652}
+  - component: {fileID: 8151439237776974082}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -4049,7 +4115,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -4086,6 +4152,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8151439237776974082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9169657923596130223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36e1c810eaef49c8aeb07fec14c6862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9210353004779597471
 GameObject:
   m_ObjectHideFlags: 0
@@ -4098,6 +4176,7 @@ GameObject:
   - component: {fileID: 6907935015756711230}
   - component: {fileID: 4022637327829532366}
   - component: {fileID: 666106376115538068}
+  - component: {fileID: 465286076672846985}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -4182,7 +4261,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -4219,3 +4298,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &465286076672846985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210353004779597471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36e1c810eaef49c8aeb07fec14c6862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
