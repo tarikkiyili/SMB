@@ -25,7 +25,11 @@ public class PlayerGroundedState : PlayerState
         }
             
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && player.IsGroundDetected())
+        {
             stateMachine.ChangeState(player.jumpState);
+            MakePersistent manager = Object.FindFirstObjectByType<MakePersistent>();
+            manager.PlayJumpSound();
+        }
         if (player.IsWallDetected())
             stateMachine.ChangeState(player.climbState);
 

@@ -1,3 +1,4 @@
+using UnityEngine;
 public class PlayerWallClingState : PlayerState
 {
     private int facingDirTemp;
@@ -32,6 +33,8 @@ public class PlayerWallClingState : PlayerState
         if (!player.IsWallDetected() || (xInput != 0 && xInput != facingDirTemp))
         {
             stateMachine.ChangeState(player.jumpState);
+            MakePersistent manager = Object.FindFirstObjectByType<MakePersistent>();
+            manager.PlayJumpSound();
             return;
         }
 

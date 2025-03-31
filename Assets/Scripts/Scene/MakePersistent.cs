@@ -9,6 +9,7 @@ public class MakePersistent : MonoBehaviour
     public AudioSource levelCompleteAudio;
     public AudioSource gameOverAudio;
     public AudioSource clickSound;
+    public AudioSource jumpSound;
 
     private static MakePersistent musicInstance;
     private bool isMusicManager => mainMenuMusic != null || inGameMusic != null;
@@ -59,4 +60,11 @@ public class MakePersistent : MonoBehaviour
             }
         }
     }
+
+    public void PlayJumpSound()
+    {
+        if (jumpSound != null)
+            jumpSound.Play();
+    }
+
 }
