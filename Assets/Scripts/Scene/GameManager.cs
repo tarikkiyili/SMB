@@ -11,6 +11,20 @@ public class GameManager : MonoBehaviour
     public GameObject pausePanel;
     public GameObject timerText;
     public TextMeshProUGUI finishTimeText;
+    public TextMeshProUGUI starConditionText;
+
+    [Header("Star UI Elements")]
+    public GameObject FillStar1;
+    public GameObject FillStar2;
+    public GameObject FillStar3;
+    public GameObject EmptyStar1;
+    public GameObject EmptyStar2;
+    public GameObject EmptyStar3;
+
+    [Header("Star Thresholds")]
+    public float threeStarThreshold = 5f;
+    public float twoStarThreshold = 10f;
+
 
     private Player player;
 
@@ -96,9 +110,30 @@ public class GameManager : MonoBehaviour
         finishTimeText.text = string.Format("{0:00}:{1:00}", Mathf.FloorToInt(time / 60f), Mathf.FloorToInt(time % 60f));
         timerText.SetActive(false);
         Time.timeScale = 0.1f;
+        int minutes3 = Mathf.FloorToInt(threeStarThreshold / 60f);
+        int seconds3 = Mathf.FloorToInt(threeStarThreshold % 60f);
+
+        int minutes2 = Mathf.FloorToInt(twoStarThreshold / 60f);
+        int seconds2 = Mathf.FloorToInt(twoStarThreshold % 60f);
+
+        starConditionText.text = $"{minutes3:00}:{seconds3:00}\n" +
+                                $"{minutes2:00}:{seconds2:00}";
 
         StartCoroutine(StopTimeAfterDelay(1f));
         StartCoroutine(FadeIn(levelCompletedPanel, 0.25f));
+
+        // Bu satırı timer'dan sonra ekle:
+        int starCount = 1;
+        if (time <= threeStarThreshold)
+            starCount = 3;
+        else if (time <= twoStarThreshold)
+            starCount = 2;
+
+        // Yıldızları aktif/pasif et
+        UpdateStars(starCount);
+
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_Completed", 1);
+        PlayerPrefs.Save();
     }
 
     public void LoadNextLevel()
@@ -130,6 +165,18 @@ public class GameManager : MonoBehaviour
             Debug.Log("Son leveldi! Level bölümüne dönülüyor...");
             LoadGameScene();
         }
+    }
+    private void UpdateStars(int starCount)
+    {
+        // Her zaman boş yıldızlar açık
+        EmptyStar1.SetActive(true);
+        EmptyStar2.SetActive(true);
+        EmptyStar3.SetActive(true);
+
+        // Dolu yıldızlar duruma göre açılır
+        FillStar1.SetActive(starCount >= 1);
+        FillStar2.SetActive(starCount >= 2);
+        FillStar3.SetActive(starCount >= 3);
     }
 
     // Game over veya Level completed olması halinde animasyonlu bir şekilde menünün gelme efekti.

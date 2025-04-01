@@ -3331,6 +3331,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 914182075}
     - target: {fileID: 7046158129385063594, guid: 3105a2f5febb640cda6a0553597f66d9, type: 3}
+      propertyPath: twoStarThreshold
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046158129385063594, guid: 3105a2f5febb640cda6a0553597f66d9, type: 3}
       propertyPath: levelCompleteAudio
       value: 
       objectReference: {fileID: 0}
