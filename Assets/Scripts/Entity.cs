@@ -67,7 +67,6 @@ public class Entity : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        // stats = GetComponent<CharacterStats>();
     }
     protected virtual void Update()
     {}

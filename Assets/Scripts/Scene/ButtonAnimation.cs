@@ -33,7 +33,6 @@ public class ButtonAnimation : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        // Click sesi çal
         var manager = FindAnyObjectByType<MakePersistent>();
         if (manager != null && manager.clickSound != null)
         {

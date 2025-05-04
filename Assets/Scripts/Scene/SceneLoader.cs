@@ -49,6 +49,5 @@ public void UpdateLevelButtons()
     {
         Application.Quit();
         PlayerPrefs.DeleteAll(); // Level save'ini silmek için
-        Debug.Log("Oyun Kapatıldı!");
     }
 }

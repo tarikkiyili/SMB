@@ -4,7 +4,6 @@ public class Player : Entity
 {
     protected override void OnDrawGizmos(){
         base.OnDrawGizmos();
-        // Gizmos.DrawLine(ceilingCheck.position, new Vector3(ceilingCheck.position.x, ceilingCheck.position.y + ceilingCheckDistance));
     }
 
     [Header("Move info")]
@@ -44,21 +43,12 @@ public class Player : Entity
         base.Update();
         stateMachine.currentState.Update();   
     }
-    // public override void Die()
-    // {
-    //     base.Die();
-    //     stateMachine.ChangeState(deadState);
-    //     GameManager.Instance.GameOver();
-    // }
 
     public bool IsTouchingSaw()
     {
-        // Oyuncunun collider'ını al
         Collider2D myCollider = GetComponent<Collider2D>();
-
-        // Temasta olunan tüm colliderları al
         ContactFilter2D contactFilter = new ContactFilter2D();
-        contactFilter.SetLayerMask(LayerMask.GetMask("Saw")); // Sadece "Saw" layer'ını kontrol et
+        contactFilter.SetLayerMask(LayerMask.GetMask("Saw"));
         contactFilter.useLayerMask = true;
 
         Collider2D[] results = new Collider2D[5];

@@ -122,14 +122,12 @@ public class GameManager : MonoBehaviour
         StartCoroutine(StopTimeAfterDelay(1f));
         StartCoroutine(FadeIn(levelCompletedPanel, 0.25f));
 
-        // Bu satırı timer'dan sonra ekle:
         int starCount = 1;
         if (time <= threeStarThreshold)
             starCount = 3;
         else if (time <= twoStarThreshold)
             starCount = 2;
 
-        // Yıldızları aktif/pasif et
         UpdateStars(starCount);
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_Completed", 1);
@@ -140,46 +138,32 @@ public class GameManager : MonoBehaviour
     {
         int buildIndex = SceneManager.GetActiveScene().buildIndex;
 
-        // Eğer sahne Level0'dan (index 2) küçükse level sayılmaz, geç
         if (buildIndex < 2)
-        {
-            Debug.LogWarning("Şu an bir level sahnesinde değilsin!");
             return;
-        }
 
-        // Şu anki level index'i (level dizisindeki sıra, 0 tabanlı)
         int currentLevel = buildIndex - 2;
-
-        // Toplam level sayısı
         int totalLevels = SceneManager.sceneCountInBuildSettings - 2;
 
         if (currentLevel + 1 < totalLevels)
         {
-            // Sonraki levelin gerçek sahne index'ini hesapla ve yükle
             int nextBuildIndex = buildIndex + 1;
             Time.timeScale = 1f;
             SceneManager.LoadScene(nextBuildIndex);
         }
         else
-        {
-            Debug.Log("Son leveldi! Level bölümüne dönülüyor...");
             LoadGameScene();
-        }
     }
     private void UpdateStars(int starCount)
     {
-        // Her zaman boş yıldızlar açık
         EmptyStar1.SetActive(true);
         EmptyStar2.SetActive(true);
         EmptyStar3.SetActive(true);
 
-        // Dolu yıldızlar duruma göre açılır
         FillStar1.SetActive(starCount >= 1);
         FillStar2.SetActive(starCount >= 2);
         FillStar3.SetActive(starCount >= 3);
     }
 
-    // Game over veya Level completed olması halinde animasyonlu bir şekilde menünün gelme efekti.
     private IEnumerator FadeIn(GameObject panel, float delay)
     {
         yield return new WaitForSecondsRealtime(delay);

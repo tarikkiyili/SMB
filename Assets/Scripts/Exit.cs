@@ -21,7 +21,6 @@ public class Exit : MonoBehaviour
             {
                 levelComplete = true;
                 GameManager.Instance.LevelCompleted();
-                Debug.Log("Level Completed");
             }
         }
     }
